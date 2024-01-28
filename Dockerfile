@@ -1,9 +1,10 @@
 FROM --platform=linux/amd64 debian:bookworm-slim
 
+COPY Gowin_V1.9.9_linux.tar.gz /tmp/Gowin_V1.9.9_linux.tar.gz
 # Install gowin toolchain
 RUN apt-get update \
     && apt-get install -y libglib2.0-0 libfontconfig1 wget \
-    && wget -P /tmp/ http://cdn.gowinsemi.com.cn/Gowin_V1.9.9Beta_linux.tar.gz \
+    #&& wget -P /tmp/ http://cdn.gowinsemi.com.cn/Gowin_V1.9.9_linux.tar.gz \
     && mkdir /usr/local/share/gowin \
     && tar xf /tmp/Gowin*.tar.gz -C /usr/local/share/gowin \
     && rm /tmp/Gowin*

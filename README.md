@@ -12,6 +12,8 @@ Example
 
 ### Building
 
+Download Gowin_V1.9.9_linux.tar.gz from Gowin's website (needs a user account now) to the same folder as Dockerfile, then run:
+
 ```shell
 $ docker build . \
     -t gowin-docker:latest
